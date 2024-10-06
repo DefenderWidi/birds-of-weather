@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BerandaFragment"
+    android:background="@color/lightblue">
+
+
+    <ImageView
+        android:id="@+id/matahari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ico_matahari"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detilcuaca_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background_white"
+        app:layout_constraintTop_toBottomOf="@id/matahari"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="16dp"
+        android:paddingVertical="16dp">
+
+        <TextView
+            android:id="@+id/tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senin, 7 Oktober 2024"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/derajat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="29°C"
+            android:fontFamily="@font/black"
+            android:textColor="@color/white"
+            android:textSize="50dp"
+            app:layout_constraintTop_toBottomOf="@id/tanggal"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/detailcuaca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cerah"
+            android:fontFamily="@font/medium"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/derajat"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <LinearLayout
+            android:id="@+id/angincontainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/detailcuaca"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                android:id="@+id/iconangin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ico_angin"
+                android:layout_marginRight="16dp"/>
+
+            <TextView
+                android:id="@+id/angin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Angin"
+                android:textColor="@color/white"
+                android:fontFamily="@font/regular"/>
+
+            <TextView
+                android:id="@+id/kecepatanangin2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="10kmh"
+                android:textColor="@color/white"
+                android:fontFamily="@font/regular"
+                app:layout_constraintBottom_toBottomOf="@id/angin"
+                app:layout_constraintLeft_toRightOf="@id/angin"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/angin" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/kelenbapancontainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/angincontainer"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                android:id="@+id/iconkelembapan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ico_air" />
+
+            <TextView
+                android:id="@+id/kelembapan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kelembaban"
+                android:textColor="@color/white"
+                android:fontFamily="@font/regular"/>
+
+            <TextView
+                android:id="@+id/tingkatkelembapan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="54%"
+                android:textColor="@color/white"
+                android:fontFamily="@font/regular"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/cityname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salatiga"
+            android:fontFamily="@font/regular"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@id/iconmap"
+            app:layout_constraintTop_toTopOf="@id/iconmap"
+            app:layout_constraintBottom_toBottomOf="@id/iconmap"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageView
+            android:id="@+id/iconmap"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ico_map"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iconnotif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ico_notif"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iconbawah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ico_down"
+            app:layout_constraintLeft_toRightOf="@id/cityname"
+            app:layout_constraintTop_toTopOf="@id/cityname"
+            app:layout_constraintBottom_toBottomOf="@id/cityname"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
