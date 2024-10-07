@@ -9,5 +9,14 @@
         android:id="@+id/berandaFragment"
         android:name="com.defenderwidi.birdsofweather.BerandaFragment"
         android:label="fragment_beranda"
-        tools:layout="@layout/fragment_beranda" />
+        tools:layout="@layout/fragment_beranda" >
+        <action
+            android:id="@+id/action_berandaFragment_to_pemberitahuanFragment"
+            app:destination="@id/pemberitahuanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pemberitahuanFragment"
+        android:name="com.defenderwidi.birdsofweather.PemberitahuanFragment"
+        android:label="fragment_pemberitahuan"
+        tools:layout="@layout/fragment_pemberitahuan" />
 </navigation>
